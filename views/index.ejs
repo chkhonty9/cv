@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nouhaila Chkhonty</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-content">
+        <h1><%= name %></h1>
+        <p class="degree"><%= education[0].degree %></p>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Left Column -->
+    <div class="left-column">
+        <!-- Education -->
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <% education.forEach(item => { %>
+                    <li>
+                        <strong><%= item.degree %></strong><br>
+                        <span><%= item.period %></span>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-section">
+                <div class="skills-category">
+                    <h3>Languages:</h3>
+                    <ul>
+                        <% skills.languages.forEach(skill => { %>
+                            <li><%= skill %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Frameworks:</h3>
+                    <ul>
+                        <% skills.frameworks.forEach(skill => { %>
+                            <li><%= skill %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Databases:</h3>
+                    <ul>
+                        <% skills.databases.forEach(skill => { %>
+                            <li><%= skill %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Tools:</h3>
+                    <ul>
+                        <% skills.tools.forEach(skill => { %>
+                            <li><%= skill %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+            <h2>Languages</h2>
+            <ul>
+                <li><strong>English:</strong> <%= languages.english %></li>
+                <li><strong>French:</strong> <%= languages.french %></li>
+                <li><strong>Arabic:</strong> <%= languages.arabic %></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <!-- About Me -->
+        <div class="section about-me">
+            <h2>About Me</h2>
+            <p><%= aboutMe %></p>
+        </div>
+
+        <!-- Projects -->
+        <div class="section projects">
+            <h2>Projects</h2>
+            <% projects.forEach(project => { %>
+                <div class="project-card">
+                    <h3><%= project.title %></h3>
+                    <p><%= project.description %></p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Contact: <%= contact.email %> | <%= contact.phone %> | <%= contact.location %></p>
+</footer>
+</body>
+</html>

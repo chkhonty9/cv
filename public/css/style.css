@@ -1,0 +1,150 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall page setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+}
+
+header {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header .degree {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+/* Container for the whole portfolio */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Left column style (Education, Skills, Languages) */
+.left-column {
+    width: 48%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-column h2 {
+    font-size: 24px;
+    color: #2d3e50;
+    margin-bottom: 20px;
+}
+
+.left-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.left-column li {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.skills-category h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3e50;
+    margin-bottom: 10px;
+}
+
+.skills-category ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-category li {
+    font-size: 16px;
+    background-color: #e5e5e5;
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Right column style (About Me, Projects) */
+.right-column {
+    width: 48%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-column h2 {
+    font-size: 24px;
+    color: #2d3e50;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
